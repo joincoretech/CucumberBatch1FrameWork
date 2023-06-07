@@ -61,4 +61,11 @@ public class EmployeeSearchSteps extends CommonMethods {
         sendText(employeeViewPage.searchBox, "Aziz");
     }
 
+
+    @When("user add employee {string}")
+    public void user_add_employee(String searchData) {
+        EmployeeViewPage employeeViewPage=new EmployeeViewPage();
+        sendText(employeeViewPage.searchBox, searchData);
+    }
+
 }

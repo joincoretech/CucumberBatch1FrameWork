@@ -66,4 +66,12 @@ public class LoginSteps  extends CommonMethods {
         Assert.assertEquals(loginPage.errorMessage.getText(), "UserName and Password is required");
     }
 
+
+    @When("User add valid {string} and {string}")
+    public void user_add_valid_and(String username, String password) {
+        LoginPage loginPage=new LoginPage();
+        sendText(loginPage.userNameBox, username);
+        sendText(loginPage.passwordBox, password);
+    }
+
 }

@@ -4,7 +4,7 @@ Feature: Employee Search
     And  user login as admin
     And user navigate to employee view page
 
-
+   @smoke
   Scenario: Search employee by id
     When user add employee id
     And user click on the submit button
@@ -15,3 +15,13 @@ Feature: Employee Search
     When user add employee name
     And user click on the submit button
     Then user validate the employee is visible in table
+
+    @example
+    Scenario Outline: search with multiple data
+      When user add employee "<data>"
+      And user click on the submit button
+      Then user validate the employee is visible in table
+      Examples:
+        | data |
+        | 105  |
+        | Aziz |
