@@ -22,7 +22,7 @@ import org.junit.runner.RunWith;
        //tag will identify the scenarios base on the tag that we provide for example @smoke, @regression etc..
         // we can add different tags in the runner class to execute scenarios belongs to that tags
         // and/or for call more scenarios
-        tags ="@datalogin"
+        tags ="@excel"
 
 )
 

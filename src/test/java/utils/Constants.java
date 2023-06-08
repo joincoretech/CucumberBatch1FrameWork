@@ -6,5 +6,6 @@ public class Constants {
             "\\src\\test\\resources\\config\\config.properties";
 
     public static final int  IMPLICIT_WAIT= 20;
+    public static final String excelFilePath=System.getProperty("user.dir")+ "\\src\\test\\resources\\testData.xlsx";
 
 }

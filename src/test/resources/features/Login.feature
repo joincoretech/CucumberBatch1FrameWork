@@ -36,3 +36,14 @@ Feature: Login
     | userName         | password   |
     |  batch1@gmailcom | batch1@123 |
     |  admin@gmail.com | admin#123  |
+
+     @error
+    Scenario: login with invalid credentials
+      When user add invalid username and password and verify error message
+       |    username    | password   |    errormessage                 |
+       |  atch1@gmailcom| batch1@123 | Username and Password is Wrong!|
+       |  admin@gmail.com| adm#123   | Username and Password is Wrong! |
+
+       @excel
+       Scenario: login use excel data
+         When user add username and password from excel "testdata" and verify the error message
