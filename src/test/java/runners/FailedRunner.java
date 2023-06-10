@@ -1,8 +1,8 @@
 package runners;
 
 
-import io.cucumber.junit.CucumberOptions;
 import io.cucumber.junit.Cucumber;
+import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
 
 
@@ -10,7 +10,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         // it is path to feature file if path is to folder all feature files will run.
         // if path is to class , only that class will run
-        features = "src/test/resources/features/",
+        features = "@target/failed.text",
         // glue is a place or folder that we implement the gherkin steps
         // glue should have the path to folder where we have all our steps.
         glue = "steps",
@@ -22,10 +22,12 @@ import org.junit.runner.RunWith;
        //tag will identify the scenarios base on the tag that we provide for example @smoke, @regression etc..
         // we can add different tags in the runner class to execute scenarios belongs to that tags
         // and/or for call more scenarios
-        tags ="@excel"
+       // tags ="@smoke",
+
+        plugin={"pretty"}
 
 )
 
-public class TestRunner {
+public class FailedRunner {
 
 }
