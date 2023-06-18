@@ -68,4 +68,17 @@ public class EmployeeSearchSteps extends CommonMethods {
         sendText(employeeViewPage.searchBox, searchData);
     }
 
+
+
+    @When("user get data from employee view page")
+    public void user_get_data_from_employee_view_page() {
+
+    }
+    @Then("user verify frontend data with backend")
+    public void user_verify_frontend_data_with_backend() {
+
+    }
+
+
+
 }

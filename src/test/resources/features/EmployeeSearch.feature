@@ -25,3 +25,10 @@ Feature: Employee Search
         | data |
         | 105  |
         | Aziz |
+
+      @db
+      Scenario:  validate data of frontend and backend
+        When user get data from backend
+        And user get data from employee view page
+        Then user verify frontend data with backend
+

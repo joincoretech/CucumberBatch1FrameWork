@@ -16,13 +16,13 @@ import org.junit.runner.RunWith;
         glue = "steps",
    // if we set thr dryRun  to true, it will quickly scan that gherkin steps are implemented.
    // if we set thr dryRun  to false, it will run the actual test
-        dryRun = false,
+        dryRun = true,
         // it will remove the unreadable word or symbol from console make the console readable.
         monochrome = true,
        //tag will identify the scenarios base on the tag that we provide for example @smoke, @regression etc..
         // we can add different tags in the runner class to execute scenarios belongs to that tags
         // and/or for call more scenarios
-        tags ="@smoke",
+        tags ="@db",
 
         plugin={"pretty", "html:target/cucumber.html", "json:target/cucumber.json", "rerun:target/failed.text" }
 
