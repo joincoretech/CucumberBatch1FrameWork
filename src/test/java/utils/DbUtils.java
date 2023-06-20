@@ -1,31 +1,37 @@
 package utils;
 
 import java.sql.*;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 
 public class DbUtils {
 
   public static Connection getConnection(){
-      Connection connection=null;
+      ConfigReader.readProperties(Constants.configurationFilePath);
+      Connection connection= null;
 
       try {
-          connection= DriverManager.getConnection(ConfigReader.getPropertyValue("dbUrl"),
+          connection = DriverManager.getConnection(ConfigReader.getPropertyValue("dbUrl"),
                   ConfigReader.getPropertyValue("dbUserName"),
                   ConfigReader.getPropertyValue("dbPassword"));
 
-      } catch (SQLException e) {
-          throw new RuntimeException(e);
+      } catch (SQLException throwables) {
+          throwables.printStackTrace();
+
       }
     return connection;
   }
 
   public static ResultSet getResultSet( String query){
-      ResultSet resultSet=null;
+      ResultSet resultSet= null;
 
       try {
           resultSet=getConnection().createStatement().executeQuery(query);
-      } catch (SQLException e) {
-          throw new RuntimeException(e);
+      } catch (SQLException throwables) {
+          throwables.printStackTrace();
       }
    return resultSet;
   }

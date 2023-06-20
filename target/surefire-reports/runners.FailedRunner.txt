@@ -1,8 +1,0 @@
--------------------------------------------------------------------------------
-Test set: runners.FailedRunner
--------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.187 s <<< FAILURE! - in runners.FailedRunner
-runners.FailedRunner.initializationError  Time elapsed: 0.007 s  <<< ERROR!
-io.cucumber.core.exception.CucumberException: Failed to parse 'target\failed.text'
-Caused by: java.nio.file.NoSuchFileException: target\failed.text
-

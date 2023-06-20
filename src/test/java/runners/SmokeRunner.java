@@ -16,7 +16,7 @@ import org.junit.runner.RunWith;
         glue = "steps",
    // if we set thr dryRun  to true, it will quickly scan that gherkin steps are implemented.
    // if we set thr dryRun  to false, it will run the actual test
-        dryRun = true,
+        dryRun = false,
         // it will remove the unreadable word or symbol from console make the console readable.
         monochrome = true,
        //tag will identify the scenarios base on the tag that we provide for example @smoke, @regression etc..
