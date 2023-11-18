@@ -10,7 +10,7 @@ import static io.restassured.RestAssured.given;
 
 public class GenerateTokenStep {
 
-     static String token;
+      static String token;
     @Given("generate token")
     public void generate_token() {
         RequestSpecification prepareRequest= given().header(APIConstants.content_type, APIConstants.application_json)

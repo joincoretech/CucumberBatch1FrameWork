@@ -2,6 +2,7 @@ package utils;
 
 public class APIPayLoad {
 
+    String example;
     public static String createLoginPayLoad(){
 
         String createPayLoad="{\n" +
